@@ -6,11 +6,12 @@
       "maxDuration": 10
     }
   },
-  "routes": [
-    { "src": "/c.js", "dest": "/public/c.js" },
-    { "src": "/dashboard", "dest": "/dashboard.html" },
-    { "src": "/api/(.*)", "dest": "/api/$1.js" },
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/(.*)\\.html", "dest": "/$1.html" }
+  "rewrites": [
+    { "source": "/c.js", "destination": "/public/c.js" },
+    { "source": "/dashboard", "destination": "/dashboard.html" },
+    { "source": "/api/create", "destination": "/api/create.js" },
+    { "source": "/api/collect", "destination": "/api/collect.js" },
+    { "source": "/api/emails", "destination": "/api/emails.js" },
+    { "source": "/api/config", "destination": "/api/config.js" }
   ]
 }
